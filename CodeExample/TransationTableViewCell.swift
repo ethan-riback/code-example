@@ -1,5 +1,5 @@
 //
-//  BankTableViewCell.swift
+//  TransationTableViewCell.swift
 //  CodeExample
 //
 //  Created by Ethan Riback on 5/8/18.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-// TODO: Update to transaction?
-class BankTableViewCell: UITableViewCell {
-
+class TransationTableViewCell: UITableViewCell {
+    
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
-
+    
 }

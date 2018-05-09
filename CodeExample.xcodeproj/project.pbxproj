@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		EA91389A20A254350079B76D /* BankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91389920A254350079B76D /* BankViewController.swift */; };
-		EA91389E20A2568D0079B76D /* BankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91389D20A2568D0079B76D /* BankTableViewCell.swift */; };
 		EA9138A020A26A500079B76D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91389F20A26A500079B76D /* Date+Extension.swift */; };
+		EA9138A220A270870079B76D /* TransationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A120A270870079B76D /* TransationTableViewCell.swift */; };
+		EA9138A420A272370079B76D /* BankRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A320A272370079B76D /* BankRouter.swift */; };
+		EA9138A620A2728F0079B76D /* BankInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A520A2728E0079B76D /* BankInteractor.swift */; };
+		EA9138A820A272E30079B76D /* BankPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A720A272E30079B76D /* BankPresenter.swift */; };
+		EA9138AA20A274A80079B76D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A920A274A80079B76D /* Transaction.swift */; };
+		EA9138AC20A274DC0079B76D /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138AB20A274DC0079B76D /* Bank.swift */; };
 		EAFD2E1520A11FA0007CFE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD2E1420A11FA0007CFE88 /* AppDelegate.swift */; };
 		EAFD2E1A20A11FA0007CFE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFD2E1820A11FA0007CFE88 /* Main.storyboard */; };
 		EAFD2E1F20A11FA2007CFE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFD2E1E20A11FA2007CFE88 /* Assets.xcassets */; };
@@ -29,8 +34,13 @@
 
 /* Begin PBXFileReference section */
 		EA91389920A254350079B76D /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
-		EA91389D20A2568D0079B76D /* BankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCell.swift; sourceTree = "<group>"; };
 		EA91389F20A26A500079B76D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		EA9138A120A270870079B76D /* TransationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransationTableViewCell.swift; sourceTree = "<group>"; };
+		EA9138A320A272370079B76D /* BankRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRouter.swift; sourceTree = "<group>"; };
+		EA9138A520A2728E0079B76D /* BankInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInteractor.swift; sourceTree = "<group>"; };
+		EA9138A720A272E30079B76D /* BankPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPresenter.swift; sourceTree = "<group>"; };
+		EA9138A920A274A80079B76D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		EA9138AB20A274DC0079B76D /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		EAFD2E1120A11FA0007CFE88 /* CodeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFD2E1420A11FA0007CFE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFD2E1920A11FA0007CFE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,8 +97,13 @@
 				EAFD2E2020A11FA2007CFE88 /* LaunchScreen.storyboard */,
 				EAFD2E2320A11FA2007CFE88 /* Info.plist */,
 				EA91389920A254350079B76D /* BankViewController.swift */,
-				EA91389D20A2568D0079B76D /* BankTableViewCell.swift */,
 				EA91389F20A26A500079B76D /* Date+Extension.swift */,
+				EA9138A120A270870079B76D /* TransationTableViewCell.swift */,
+				EA9138A320A272370079B76D /* BankRouter.swift */,
+				EA9138A520A2728E0079B76D /* BankInteractor.swift */,
+				EA9138A720A272E30079B76D /* BankPresenter.swift */,
+				EA9138A920A274A80079B76D /* Transaction.swift */,
+				EA9138AB20A274DC0079B76D /* Bank.swift */,
 			);
 			path = CodeExample;
 			sourceTree = "<group>";
@@ -203,9 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9138A620A2728F0079B76D /* BankInteractor.swift in Sources */,
+				EA9138A420A272370079B76D /* BankRouter.swift in Sources */,
+				EA9138AA20A274A80079B76D /* Transaction.swift in Sources */,
 				EAFD2E1520A11FA0007CFE88 /* AppDelegate.swift in Sources */,
+				EA9138A820A272E30079B76D /* BankPresenter.swift in Sources */,
 				EA9138A020A26A500079B76D /* Date+Extension.swift in Sources */,
-				EA91389E20A2568D0079B76D /* BankTableViewCell.swift in Sources */,
+				EA9138AC20A274DC0079B76D /* Bank.swift in Sources */,
+				EA9138A220A270870079B76D /* TransationTableViewCell.swift in Sources */,
 				EA91389A20A254350079B76D /* BankViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
