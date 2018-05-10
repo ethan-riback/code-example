@@ -26,4 +26,10 @@ struct Bank: Decodable {
         finalBalance = try wallet.decode(Double.self, forKey: .finalBalance)
         transactions = try values.decode([Transaction].self, forKey: .transactions)
     }
+    
+    // This is used for testing
+    init() {
+        finalBalance = 0.0
+        transactions = []
+    }
 }

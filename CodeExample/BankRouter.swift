@@ -7,6 +7,10 @@
 //
 
 class BankRouter {
+    // Note: I like to use the Router to start new feature contexts.
+    // Since this example starts with the VC in the Storyboard, not
+    // sure how to route that functionality to here first...so I kinda
+    // hacked a work around
     func start(with view: BankViewController) {
         
         let interactor = BankInteractor()

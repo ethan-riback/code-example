@@ -15,11 +15,15 @@
 		EA9138A820A272E30079B76D /* BankPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A720A272E30079B76D /* BankPresenter.swift */; };
 		EA9138AA20A274A80079B76D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138A920A274A80079B76D /* Transaction.swift */; };
 		EA9138AC20A274DC0079B76D /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138AB20A274DC0079B76D /* Bank.swift */; };
+		EA9138B220A4E6530079B76D /* BankViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138B120A4E6530079B76D /* BankViewControllerTests.swift */; };
+		EA9138B420A4ECE20079B76D /* Date+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138B320A4ECE20079B76D /* Date+ExtensionTests.swift */; };
+		EA9138B620A4ED9E0079B76D /* TransationTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138B520A4ED9E0079B76D /* TransationTableViewCellTests.swift */; };
+		EA9138B820A4EEA00079B76D /* BankRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138B720A4EEA00079B76D /* BankRouterTests.swift */; };
+		EA9138BA20A4F0850079B76D /* BankPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9138B920A4F0850079B76D /* BankPresenterTests.swift */; };
 		EAFD2E1520A11FA0007CFE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD2E1420A11FA0007CFE88 /* AppDelegate.swift */; };
 		EAFD2E1A20A11FA0007CFE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFD2E1820A11FA0007CFE88 /* Main.storyboard */; };
 		EAFD2E1F20A11FA2007CFE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFD2E1E20A11FA2007CFE88 /* Assets.xcassets */; };
 		EAFD2E2220A11FA2007CFE88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFD2E2020A11FA2007CFE88 /* LaunchScreen.storyboard */; };
-		EAFD2E2D20A11FA2007CFE88 /* CodeExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD2E2C20A11FA2007CFE88 /* CodeExampleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,11 @@
 		EA9138A720A272E30079B76D /* BankPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPresenter.swift; sourceTree = "<group>"; };
 		EA9138A920A274A80079B76D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		EA9138AB20A274DC0079B76D /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		EA9138B120A4E6530079B76D /* BankViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewControllerTests.swift; sourceTree = "<group>"; };
+		EA9138B320A4ECE20079B76D /* Date+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionTests.swift"; sourceTree = "<group>"; };
+		EA9138B520A4ED9E0079B76D /* TransationTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransationTableViewCellTests.swift; sourceTree = "<group>"; };
+		EA9138B720A4EEA00079B76D /* BankRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRouterTests.swift; sourceTree = "<group>"; };
+		EA9138B920A4F0850079B76D /* BankPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPresenterTests.swift; sourceTree = "<group>"; };
 		EAFD2E1120A11FA0007CFE88 /* CodeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFD2E1420A11FA0007CFE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFD2E1920A11FA0007CFE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +57,6 @@
 		EAFD2E2120A11FA2007CFE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAFD2E2320A11FA2007CFE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAFD2E2820A11FA2007CFE88 /* CodeExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAFD2E2C20A11FA2007CFE88 /* CodeExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeExampleTests.swift; sourceTree = "<group>"; };
 		EAFD2E2E20A11FA2007CFE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +119,12 @@
 		EAFD2E2B20A11FA2007CFE88 /* CodeExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				EAFD2E2C20A11FA2007CFE88 /* CodeExampleTests.swift */,
 				EAFD2E2E20A11FA2007CFE88 /* Info.plist */,
+				EA9138B120A4E6530079B76D /* BankViewControllerTests.swift */,
+				EA9138B320A4ECE20079B76D /* Date+ExtensionTests.swift */,
+				EA9138B520A4ED9E0079B76D /* TransationTableViewCellTests.swift */,
+				EA9138B720A4EEA00079B76D /* BankRouterTests.swift */,
+				EA9138B920A4F0850079B76D /* BankPresenterTests.swift */,
 			);
 			path = CodeExampleTests;
 			sourceTree = "<group>";
@@ -234,7 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAFD2E2D20A11FA2007CFE88 /* CodeExampleTests.swift in Sources */,
+				EA9138B820A4EEA00079B76D /* BankRouterTests.swift in Sources */,
+				EA9138BA20A4F0850079B76D /* BankPresenterTests.swift in Sources */,
+				EA9138B220A4E6530079B76D /* BankViewControllerTests.swift in Sources */,
+				EA9138B420A4ECE20079B76D /* Date+ExtensionTests.swift in Sources */,
+				EA9138B620A4ED9E0079B76D /* TransationTableViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

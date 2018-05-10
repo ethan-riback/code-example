@@ -22,8 +22,10 @@ class BankInteractor {
 }
 
 extension BankInteractor: BankInteractorInput {
+    // Note: I wanted to unit test this but URLSession makes testing tough. I'd normally deal
+    // with some kind of custom class for web requests and create a mock response for this.
     func fetchData() {
-        // I normally prefer using Web frameworks to make requests since URLSession usually produces not the most readible code
+        // Note: I normally prefer using Web frameworks to make requests since URLSession usually produces not the most readible code
         let urlString = "https://blockchain.info/multiaddr?active=xpub6CfLQa8fLgtouvLxrb8EtvjbXfoC1yqzH6YbTJw4dP7srt523AhcMV8Uh4K3TWSHz9oDWmn9MuJogzdGU3ncxkBsAC9wFBLmFrWT9Ek81kQ"
         guard let url = URL(string: urlString) else {
             return

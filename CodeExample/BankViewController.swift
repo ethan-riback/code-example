@@ -8,25 +8,48 @@
 
 import UIKit
 
+// Note: I make effective use of protocols to keep class responsibility separated,
+// this way, if we need a view redesign driven by the same data, only this class
+// needs to change but other classes stay the same.
 protocol BankViewInput: class {
-    func set(bankData: Bank)
+    func set(viewModel: BankViewController.BankViewModel)
 }
 
+// Note: I have lately enjoyed adding complete swift standard documentation
+// to my protocols. I didn't in this cause I need to catch a flight. Might
+// update later...
 protocol BankViewOutput {
     func fetchData()
 }
 
 class BankViewController: UITableViewController {
     
+    // Note: With a view model, I am keeping this class as dumb as possible
+    struct BankViewModel {
+        let transactions: [TransationTableViewCell.TransationViewModel]
+    }
+    
     var output: BankViewOutput?
     
-    // Create default Bank init so that I can make this lazy and non-optional
-    private var bankData: Bank? = nil
+    // Note: I like to use private(set) since it's easy for unit testing
+    private(set) var viewModel: BankViewModel = BankViewModel(transactions: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BankRouter().start(with: self)
+        setup(router: BankRouter())
+    }
+    
+    // Note: I separated some of this code out to make some unit testing easier.
+    // Plus, it's also easier to read now!
+    func setup(router: BankRouter) {
+        router.start(with: self)
         output?.fetchData()
+    }
+    
+    func reloadTableViewData() {
+        DispatchQueue.main.sync {
+            tableView.reloadData()
+        }
     }
     
     // MARK: Cell Animations
@@ -58,17 +81,17 @@ class BankViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bankData?.transactions.count ?? 0
+        return viewModel.transactions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as? TransationTableViewCell,
-            let transaction = bankData?.transactions[indexPath.item] else {
-                return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as? TransationTableViewCell else {
+            return UITableViewCell()
         }
         
-        cell.amountLabel.text = "Sent \(transaction.result)"
-        cell.timeLabel.text = transaction.time.displayString()
+        let transaction = viewModel.transactions[indexPath.item]
+        cell.amountLabel.text = transaction.amountText
+        cell.timeLabel.text = transaction.timeText
         
         let amountLabelTap = UITapGestureRecognizer(target: self, action: #selector(self.amountLabelTapped(_:)))
         cell.amountLabel.addGestureRecognizer(amountLabelTap)
@@ -83,11 +106,8 @@ class BankViewController: UITableViewController {
 }
 
 extension BankViewController: BankViewInput {
-    func set(bankData: Bank) {
-        self.bankData = bankData
-        
-        DispatchQueue.main.sync {
-            tableView.reloadData()
-        }
+    func set(viewModel: BankViewController.BankViewModel) {
+        self.viewModel = viewModel
+        reloadTableViewData()
     }
 }
